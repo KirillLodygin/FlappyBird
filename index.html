@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="gamestyle.css">
+    <script type="text/javascript" src="phaser.min.js"></script>
+    <script type="text/javascript" src="webfontloader/webfontloader.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+        var Clay = Clay || {};
+        Clay.gameKey = "gflappybird";
+        Clay.readyFunctions = [];
+        Clay.ready = function(fn) {
+            Clay.readyFunctions.push(fn);
+        };
+
+        (function() {
+            var clay = document.createElement("script");
+            clay.async = true;
+            clay.src = ("https:" == document.location.protocol ? "https://" : "http://") +
+                    "clay.io/api/api-leaderboard-achievement.js";
+            var tag = document.getElementsByTagName("script")[0];
+            tag.parentNode.insertBefore(clay, tag);
+        })();
+    </script>
+</head>
+<body>
+    <div id="game"></div>
+
+</body>
+</html>
